@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SilhouetteGOose.View.PlayerSelect.PlayerSelectPage"
+             Title="PlayerSelectPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Select your character"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button 
+            Text="Start game"
+            x:Name="StartGameBtn"
+            Clicked="StartGameBtn_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SilhouetteGOose.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SilhouetteGOose"
+    xmlns:welcome="clr-namespace:SilhouetteGOose.View.Welcome"
+    xmlns:game="clr-namespace:SilhouetteGOose.View.Game"
+    xmlns:playerSelect="clr-namespace:SilhouetteGOose.View.PlayerSelect"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate welcome:WelcomePage}"
+        Route="WelcomePage" />
+
+    <ShellContent
+        Title="Game"
+        ContentTemplate="{DataTemplate game:GamePage}"
+        Route="GamePage" />
+
+    <ShellContent
+        Title="PlayerSelect"
+        ContentTemplate="{DataTemplate playerSelect:PlayerSelectPage}"
+        Route="PlayerSelectPage" />
+
+</Shell>
