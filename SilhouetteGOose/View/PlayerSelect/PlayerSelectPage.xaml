@@ -9,6 +9,54 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        <Grid ColumnDefinitions="*,*">
+
+            <Border Stroke="#000000"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 4,4,4,4"
+                Padding="5">
+
+                <StackLayout>
+                    
+
+                    <Image Source="player_scorpion.jpg"
+                       WidthRequest="50"
+                       MinimumWidthRequest="40" />
+
+                    <Label Text="Silvio"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       Padding="10,0" />
+
+                </StackLayout>
+            </Border>
+
+            <Border Stroke="#000000"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 4,4,4,4"
+                Padding="5">
+
+                <StackLayout>
+                    
+
+                    <Image Source="player_scorpion.jpg"
+                       WidthRequest="50"
+                       MinimumWidthRequest="40" />
+
+                    <Label Text="Silvia"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       Padding="10,0" />
+
+
+
+                </StackLayout>
+            </Border>
+
+        </Grid>
+
         <Button 
             Text="Start game"
             x:Name="StartGameBtn"

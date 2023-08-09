@@ -65,6 +65,7 @@ namespace SilhouetteGOose.ViewModel.Game
 
         // List of enemy geese
         public List<GooseRegular> GeeseList = new();
+        private List<GooseRegular> GeeseToRemove = new();
 
         public GamePageViewModel()
         {
@@ -401,12 +402,29 @@ namespace SilhouetteGOose.ViewModel.Game
         [RelayCommand]
         public void PressConfirm()
         {
+            var mapMat = SKMatrix.CreateScale(1f, 1f);
+
             Debug.WriteLine("CCCCCCCCCCCCCCCCCCCCCCC");
             foreach (GooseRegular goose in GeeseList)
             {
-                /*                var goosePos = mat.Invert().MapPoint(bolt.BoltXcord, bolt.BoltYcord);
+                var goosePos = mapMat.Invert().MapPoint(goose.GooseXpos, goose.GooseYpos);
 
-                                if (PlayerRectangle.Contains())*/
+                if (PlayerRectangle.Contains(goosePos))
+                {
+                    Debug.WriteLine("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ");
+
+                    GeeseToRemove.Add(goose);
+
+                }
+            }
+            ManageGooseRemovals();
+        }
+
+        private void ManageGooseRemovals()
+        {
+            foreach (GooseRegular goose in GeeseToRemove)
+            {
+                GeeseList.Remove(goose);
             }
         }
     }
